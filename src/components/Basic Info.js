@@ -1,15 +1,17 @@
 
 import React, { Component } from 'react';
+import HandleBasicInfo from './HandleBasicInfo';
 
 class BasicInfo extends Component{
   constructor(){
     super();
   
   this.state = {
-    name: '',
-    email:'',
-    phoneNo:''
-}
+    name: 'John Carter',
+    email:'johncarter@gmail.com',
+    phoneNo:'+20019890899'
+};
+
 /*
 this.handleChange = this.handleChange.bind(this);
 this.handleSubmit = this.handleSubmit.bind(this)*/
@@ -30,6 +32,7 @@ handleChange = (e) => {
  [e.target.name]: e.target.value
   })
 }
+
   render(){
 
     return(
@@ -51,17 +54,15 @@ onChange={this.handleChange}value={this.state.name}></input>
 
       <button type="submit">Done</button>
       </form>
-
-      <h1>{this.state.name}</h1>
-      <h3>{this.state.email}</h3>
-      <h3>{this.state.phoneNo}</h3>
+      <HandleBasicInfo name={this.state.name}email={this.state.email}phoneNo={this.state.phoneNo}/>
+     
 
 </div>
-
 
     )
   }
 }
+
 export default BasicInfo;
 
 
