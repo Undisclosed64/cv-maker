@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import HandleEducation from './HandleEducation';
 
 class Education extends Component{
   constructor(){
     super();
   
   this.state = {
-    course: '',
-    insitution:'',
-    startDate:'',
-    endDate:'',
+    course: 'MBA',
+    institution:'Stanford University',
+    startDate:'2018',
+    endDate:'2021',
 }
 /*
 this.handleChange = this.handleChange.bind(this);
@@ -58,11 +59,8 @@ onChange={this.handleChange}value={this.state.institution}></input>
       <button type="submit">Done</button>
       </form>
 
-      <h1>{this.state.course}</h1>
-      <h3>{this.state.institution}</h3>
-      <h3>{this.state.startDate}</h3>
-      <h3>{this.state.endDate}</h3>
-
+<HandleEducation course={this.state.course}institution={this.state.institution}startDate={this.state.startDate}endDate={this.state.endDate}/>
+  
 
 </div>
 
