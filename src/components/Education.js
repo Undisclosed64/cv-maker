@@ -2,18 +2,26 @@ import React, { Component } from 'react';
 import HandleEducation from './HandleEducation';
 
 class Education extends Component{
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+    
+  }
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  }
+  /*
   constructor(){
     super();
   
   this.state = {
-    course: 'MBA',
-    institution:'Stanford University',
-    startDate:'2018',
-    endDate:'2021',
+    course: '',
+    institution:'',
+    startDate:'',
+    endDate:'',
 }
-/*
-this.handleChange = this.handleChange.bind(this);
-this.handleSubmit = this.handleSubmit.bind(this)*/
+
 }
 handleSubmit = (e) => {
     const { course,insitution,startDate,endDate} = this.state;
@@ -31,37 +39,36 @@ handleChange = (e) => {
   this.setState({
  [e.target.name]: e.target.value
   })
-}
+}*/
   render(){
+    const {values,handleChange} = this.props;
 
     return(
-      <div>
-     <div>Education</div>
-      <form onSubmit={this.handleSubmit}>
+      <div className="formContainer">
+        <div id="educationSection">
+     <div className="sectionName">Education</div>
+      <form /*onSubmit={this.handleSubmit*/>
+      <input name="course"placeholder="Course"className="first"type="text"onChange={handleChange('course')}defaultValue={values.course}></input>
 
-      <label htmlFor="Course Name">Course Name
-      <input name="course"type="text"onChange={this.handleChange}value={this.state.course}></input>
-      </label>
+      <input type="text"name='institution'placeholder="Institution"
+   onChange={handleChange('institution')}defaultValue={values.institution}></input>
 
-      <label htmlFor="Institution">Institution Name
-      <input type="text"name='institution' 
-onChange={this.handleChange}value={this.state.institution}></input>
-      </label>
+<input type="text"name='State'placeholder="State"
+   onChange={handleChange('State')}defaultValue={values.State}></input>
 
-     <label htmlFor="Start Date">Start Date
-      <input name="startDate"type="date"onChange={this.handleChange}value={this.state.startDate}></input>
-      </label>
+      <input name="skills"placeholder="Skills"onChange={handleChange('skills')}defaultValue={values.skills}></input>
 
-      <label htmlFor="End Date">End Date
-      <input name="endDate"type="date"onChange={this.handleChange}value={this.state.endDate}></input>
-      </label>
+      <input name="graduationYear"placeholder="Graduation year"type="number"onChange={handleChange('graduationYear')}defaultValue={values.graduationYear}></input>
 
-      <button type="submit">Done</button>
+      <div className="btns">
+      <button className="prev"onClick={this.back}>Previous</button>
+      <button className="next"onClick={this.continue}>Next</button>
+      </div>
       </form>
 
-<HandleEducation course={this.state.course}institution={this.state.institution}startDate={this.state.startDate}endDate={this.state.endDate}/>
+<HandleEducation course={values.course}institution={values.institution}State={values.State}skills={values.skills}graduationYear={values.graduationYear}/>
   
-
+</div>
 </div>
 
 

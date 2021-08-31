@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import HandleWorkExp from './HandleWorkExp';
+
 class WorkExp extends Component{
-  constructor(){
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+    
+  }
+  back = e => {
+    e.preventDefault();
+    this.props.prevStep();
+  }
+ /* constructor(){
     super();
   
   this.state = {
-    job: 'Software Developer',
-    company:'Google',
-    startDate:'2019',
-    endDate:'2021',
+    job: '',
+    company:'',
+    startDate:'',
+    endDate:'',
 }
-/*
-this.handleChange = this.handleChange.bind(this);
-this.handleSubmit = this.handleSubmit.bind(this)*/
+
 }
 handleSubmit = (e) => {
     const {job,company,startDate,endDate} = this.state;
@@ -30,38 +38,40 @@ handleChange = (e) => {
   this.setState({
  [e.target.name]: e.target.value
   })
-}
+}*/
   render(){
+    const {values,handleChange} = this.props;
+
 
     return(
-      <div>
-     <div>Work Experience</div>
-      <form onSubmit={this.handleSubmit}>
+      <div className="formContainer">
+        <div id="workExp">
+     <div className="sectionName">Work Experience</div>
+      <form /*onSubmit={this.handleSubmit}*/>
 
-      <label htmlFor="Job title">Job title
-      <input name="job"type="text"onChange={this.handleChange}value={this.state.job}></input>
-      </label>
+      <input name="job"placeholder="Your Role"className="first"type="text"onChange={handleChange('job')}defaultValue={values.job}></input>
 
-      <label htmlFor="Company name">Company name
-      <input type="text"name='company' 
-onChange={this.handleChange}value={this.state.company}></input>
-      </label>
+      <input type="text"name='company'placeholder="Company" 
+onChange={handleChange('company')}defaultValue={values.company}></input>
 
-     <label htmlFor="Start Date">Start Date
-      <input name="startDate"type="date"onChange={this.handleChange}value={this.state.startDate}></input>
-      </label>
+<input type="text"name='city'placeholder="City" 
+onChange={handleChange('city')}defaultValue={values.city}></input>
 
-      <label htmlFor="End Date">End Date
-      <input name="endDate"type="date"onChange={this.handleChange}value={this.state.endDate}></input>
-      </label>
+      <input name="StartDate"type="date"onChange={handleChange('StartDate')}defaultValue={values.StartDate}></input>
 
-      <button type="submit">Done</button>
+      <input name="EndDate"type="date"onChange={handleChange('EndDate')}defaultValue={values.EndDate}></input>
+
+      <div className="btns">
+      <button className="prev"onClick={this.back}>Previous</button>
+      <button className="next"onClick={this.continue}>Next</button>
+      </div>
+
       </form>
 
-<HandleWorkExp job={this.state.job}company={this.state.company}startDate={this.state.startDate} endDate={this.state.endDate}/>
+<HandleWorkExp job={values.job}company={values.company}city={values.city}StartDate={values.StartDate} EndDate={values.EndDate}/>
     
 
-
+</div>
 </div>
 
 

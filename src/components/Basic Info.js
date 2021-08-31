@@ -3,18 +3,22 @@ import React, { Component } from 'react';
 import HandleBasicInfo from './HandleBasicInfo';
 
 class BasicInfo extends Component{
+  continue = e => {
+    e.preventDefault();
+    this.props.nextStep();
+    
+  }
+ /*
   constructor(){
     super();
-  
+  }
+
   this.state = {
-    name: 'John Carter',
-    email:'johncarter@gmail.com',
-    phoneNo:'+20019890899'
+    name: '',
+    email:'',
+    phoneNo:''
 };
 
-/*
-this.handleChange = this.handleChange.bind(this);
-this.handleSubmit = this.handleSubmit.bind(this)*/
 }
 handleSubmit = (e) => {
     const { name,email,phoneNo } = this.state;
@@ -32,32 +36,30 @@ handleChange = (e) => {
  [e.target.name]: e.target.value
   })
 }
+*/
+
 
   render(){
+   const {values,handleChange} = this.props;
 
     return(
-      <div>
-     <div>Basic Info</div>
-      <form onSubmit={this.handleSubmit}>
-      <label htmlFor="Name">Name 
-      <input placeholder="Your Name"type="text"name='name' 
-onChange={this.handleChange}value={this.state.name}></input>
-      </label>
+      <div className="formContainer">
+     <div className="sectionName">Basic Info</div>
+      <form /*onSubmit={this.handleSubmit}*/>
+      
+      <input placeholder="Your Name"type="text"name='name'/*value={name}*/className="first" onChange={handleChange('name')}defaultValue={values.name}></input>
+    
+      <input placeholder=" Your Email"name="email"type="email"onChange={handleChange('email')}defaultValue={values.email}/*value={email}*/></input>
+    
+      <input placeholder="Phn No"name="phoneNo"type="number"onChange={handleChange('phone')}defaultValue={values.phone}/*value={phoneNo}*/></input>
 
-      <label htmlFor="Email">Enter Email 
-      <input placeholder=" Your Email"name="email"type="email"onChange={this.handleChange}value={this.state.email}></input>
-      </label>
-
-     <label htmlFor="Phn No">Phone No
-      <input placeholder="Phn No"name="phoneNo"type="number"onChange={this.handleChange}value={this.state.phoneNo}></input>
-      </label>
-
-      <button type="submit">Done</button>
+      <div className="btn">
+      <button className="next btn"onClick={this.continue}>Next</button>
+      </div>
       </form>
-      <HandleBasicInfo name={this.state.name}email={this.state.email}phoneNo={this.state.phoneNo}/>
-     
+    <HandleBasicInfo name={values.name}email={values.email}phoneNo={values.phone}/>
+      </div>
 
-</div>
 
     )
   }
