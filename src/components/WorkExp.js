@@ -54,9 +54,6 @@ handleChange = (e) => {
       <input type="text"name='company'placeholder="Company" 
 onChange={handleChange('company')}defaultValue={values.company}></input>
 
-<input type="text"name='city'placeholder="City" 
-onChange={handleChange('city')}defaultValue={values.city}></input>
-
       <input name="StartDate"type="date"onChange={handleChange('StartDate')}defaultValue={values.StartDate}></input>
 
       <input name="EndDate"type="date"onChange={handleChange('EndDate')}defaultValue={values.EndDate}></input>
@@ -68,7 +65,7 @@ onChange={handleChange('city')}defaultValue={values.city}></input>
 
       </form>
 
-<HandleWorkExp job={values.job}company={values.company}city={values.city}StartDate={values.StartDate} EndDate={values.EndDate}/>
+<HandleWorkExp job={values.job}company={values.company}StartDate={values.StartDate} EndDate={values.EndDate}/>
     
 
 </div>

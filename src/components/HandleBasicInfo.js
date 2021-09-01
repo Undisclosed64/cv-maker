@@ -6,9 +6,11 @@ class HandleBasicInfo extends Component{
     render(){
       return(
   <div>
+
+
           <h1>{this.props.name}</h1>
-          <h3>{this.props.email}</h3>
-          <h3>{this.props.phoneNo}</h3>
+          <div>{this.props.email}</div>
+          <div>{this.props.phoneNo}</div>
           </div>
       )
     }
