@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import UserForm from './UserForm';
 
 
 class CVTheme extends Component {
@@ -9,7 +10,6 @@ constructor(){
 
 }
 handleOnClick = () => {
-    alert('hi')
     //.current is verification that your element has rendered
     if(this.SectionToFocus.current){
         this.SectionToFocus.current.scrollIntoView({ 
@@ -22,6 +22,7 @@ handleOnClick = () => {
         const {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
         return (
             <div>
+                <UserForm handleOnClick={this.handleOnClick}/>
             <div className="themeContainer">
     <div className="cvWrapper"ref={this.SectionToFocus}>
 <div id="intro">
