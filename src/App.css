@@ -6,7 +6,6 @@
   padding: 0;
 }
 body {
-  /*font-family: "Roboto", sans-serif;*/
   font-family: "Raleway", sans-serif;
   padding-bottom: 4em;
 }
@@ -28,7 +27,6 @@ header {
   margin: 2em auto;
   margin-top: 4em;
   border-radius: 5px;
-  /*padding: 2em;*/
   width: 80%;
 }
 .sectionName {
@@ -48,12 +46,16 @@ input {
   font-size: 16px;
   font-family: Raleway;
   border: 1px solid #dbb1b1;
-  margin: 0.8em auto;
+  margin: 0.5em auto;
   background-color: #fff0f0;
   border-radius: 0 0.2857rem 0.2857rem 0;
 }
 .first {
   box-shadow: 2px 0 0 0 #d95c5c inset;
+}
+#phonNo {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 input:hover {
   cursor: pointer;
@@ -81,7 +83,7 @@ input:hover {
   border-radius: 2px;
 }
 .prev {
-  background-color: #aaa;
+  background-color: #c2c5aa;
 }
 .next {
   background-color: #d95c5c;
@@ -125,12 +127,6 @@ input:hover {
   font-size: 1.4rem;
   padding-bottom: 15px;
 }
-
-/*
-#mail,
-#phone,
-#location {
-}*/
 #contentWrapper {
   font-family: "Roboto", sans-serif;
   background-color: #f0efeb;
@@ -165,6 +161,16 @@ input:hover {
   font-weight: 600;
   font-size: 1.3rem;
   cursor: pointer;
+}
+#skills {
+  text-transform: uppercase;
+}
+@media print {
+  header,
+  .formContainer,
+  #print {
+    display: none;
+  }
 }
 @media only screen and (min-width: 464px) {
   header {
