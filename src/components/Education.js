@@ -10,50 +10,21 @@ class Education extends Component{
     e.preventDefault();
     this.props.prevStep();
   }
-  /*
-  constructor(){
-    super();
   
-  this.state = {
-    course: '',
-    institution:'',
-    startDate:'',
-    endDate:'',
-}
-
-}
-handleSubmit = (e) => {
-    const { course,insitution,startDate,endDate} = this.state;
-    e.preventDefault();
-    alert(`
-    ____Your Details____\n
-    Course: ${course}
-    Institute : ${insitution}
-    Start Date : ${startDate}
-    End Date : ${endDate}
-  `)
-}
-
-handleChange = (e) => {
-  this.setState({
- [e.target.name]: e.target.value
-  })
-}*/
   render(){
     const {values,handleChange} = this.props;
 
     return(
       <div className="formContainer">
-        <div id="educationSection">
+        <div>
      <div className="sectionName">Education</div>
-      <form /*onSubmit={this.handleSubmit*/>
+      <form>
       <input name="course"placeholder="Course"className="first"type="text"onChange={handleChange('course')}defaultValue={values.course}></input>
 
       <input type="text"name='institution'placeholder="Institution"
    onChange={handleChange('institution')}defaultValue={values.institution}></input>
 
-<input type="text"name='State'placeholder="State"
-   onChange={handleChange('State')}defaultValue={values.State}></input>
+  <input type="text"name='State'placeholder="State"onChange={handleChange('State')}defaultValue={values.State}></input>
 
       <input name="skills"placeholder="Skills"onChange={handleChange('skills')}defaultValue={values.skills}></input>
 
@@ -67,8 +38,6 @@ handleChange = (e) => {
   
 </div>
 </div>
-
-
     )
   }
 }
