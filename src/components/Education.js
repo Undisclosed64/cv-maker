@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HandleEducation from './HandleEducation';
 
 class Education extends Component{
   continue = e => {
@@ -65,8 +64,6 @@ handleChange = (e) => {
       <button className="next"onClick={this.continue}>Next</button>
       </div>
       </form>
-
-<HandleEducation course={values.course}institution={values.institution}State={values.State}skills={values.skills}graduationYear={values.graduationYear}/>
   
 </div>
 </div>

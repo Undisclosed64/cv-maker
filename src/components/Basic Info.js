@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
-import HandleBasicInfo from './HandleBasicInfo';
 import CVTheme from './CVTheme';
+import UserForm from './UserForm';
 
 class BasicInfo extends Component{
   continue = e => {
@@ -9,27 +9,9 @@ class BasicInfo extends Component{
     this.props.nextStep();
     
   }
+ 
+
   /*
-  handleClick = (e) => {
-    console.log('hi');
-    this.setState({
-      [e.target.name]: e.target.value
-
-    })
-     
-   }*/
- /*
-  constructor(){
-    super();
-  }
-
-  this.state = {
-    name: '',
-    email:'',
-    phoneNo:''
-};
-
-}
 handleSubmit = (e) => {
     const { name,email,phoneNo } = this.state;
     e.preventDefault();
@@ -58,15 +40,15 @@ handleChange = (e) => {
      <div className="sectionName">Basic Info</div>
       <form /*onSubmit={this.handleSubmit}*/>
       
-      <input placeholder="Your Name"type="text"name='name'/*value={name}*/className="first" onChange={handleChange('name')}defaultValue={values.name}onClick={this.handleClick}></input>
+      <input placeholder="Your Name"type="text"name='name'className="first" onChange={handleChange('name')}defaultValue={values.name}onClick={this.handleClick}></input>
 
-      <input placeholder="Your Occupation"name="occupation"type="text"onChange={handleChange('occupation')}defaultValue={values.occupation}/*value={email}*/></input>
+      <input placeholder="Your Occupation"name="occupation"type="text"onChange={handleChange('occupation')}defaultValue={values.occupation}></input>
 
       <input placeholder=" Your Email"name="email"type="email"onChange={handleChange('email')}defaultValue={values.email}/*value={email}*/></input>
+
+      <input placeholder="Phone no"name="contactNo"onChange={handleChange('contactNo')}defaultValue={values.contactNo}></input>
       
       <input placeholder="Your City"name="city"type="text"onChange={handleChange('city')}defaultValue={values.city}/*value={email}*/></input>
-
-      <input placeholder="Phn No"name="phone"type="number"onChange={handleChange('phone')}defaultValue={values.phone}/*value={phoneNo}*/></input>
 
       <div className="btn">
       <button className="next btn"onClick={this.continue}>Next</button>
@@ -74,7 +56,7 @@ handleChange = (e) => {
       </form>
 
       </div>
-      <CVTheme name={values.name}occupation={values.occupation}email={values.email}phone={values.phone}city={values.city}course={values.course}institution={values.institution}State={values.State}skills={values.skills}graduationYear={values.graduationYear}job={values.job}company={values.company}StartDate={values.StartDate}EndDate={values.EndDate}/>
+      <CVTheme name={values.name}occupation={values.occupation}email={values.email}contactNo={values.contactNo}city={values.city}course={values.course}institution={values.institution}State={values.State}skills={values.skills}graduationYear={values.graduationYear}job={values.job}company={values.company}StartDate={values.StartDate}EndDate={values.EndDate}/>
 
 </div>
 

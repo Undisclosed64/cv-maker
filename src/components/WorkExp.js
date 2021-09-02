@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import HandleWorkExp from './HandleWorkExp';
 
 class WorkExp extends Component{
   continue = e => {
@@ -60,12 +59,11 @@ onChange={handleChange('company')}defaultValue={values.company}></input>
 
       <div className="btns">
       <button className="prev"onClick={this.back}>Previous</button>
-      <button className="next"onClick={this.continue}>Next</button>
+      <button className="next"type="submit"onClick={this.continue}>Submit</button>
       </div>
 
       </form>
 
-<HandleWorkExp job={values.job}company={values.company}StartDate={values.StartDate} EndDate={values.EndDate}/>
     
 
 </div>

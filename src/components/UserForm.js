@@ -2,14 +2,18 @@ import React, { Component } from 'react'
 import BasicInfo from './Basic Info';
 import Education from './Education';
 import WorkExp from './WorkExp';
-import CVTheme from './CVTheme';
 export class UserForm extends Component {
+    moveTOCV = (e) => {
+        e.preventDefault();
+       this.props.handleOnClick();
+   
+    }
     state = {
         step:1,
         name:'Sara David',
         occupation:'Web Developer',
         email:'undisclosed64@gmail.com',
-        phone:'+3987652103',
+        contactNo:'+3987652103',
         city:'New York,US',
         course:'Bachelor of Humanities',
         institution:'Stanford University',
@@ -45,8 +49,8 @@ export class UserForm extends Component {
     render() {
 
         const {step}  = this.state;
-const {name,occupation,email,phone,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.state;
-const values = {name,occupation,email,phone,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate};
+const {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.state;
+const values = {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate};
 
 switch(step){
     case 1:
@@ -65,10 +69,11 @@ case 3:
         <WorkExp nextStep = {this.nextStep}prevStep={this.prevStep}handleChange={this.handleChange}values={values}
         />
     );    
-        case 4:
-            return <div>Success</div>
+case 4:
+    return <button onClick={this.moveTOCV}id="view">View CV</button>
+    
             default:
-                return <div>hii</div>
+                return <div>Sorry,something went wrong!</div>
         }
 
 

@@ -1,11 +1,34 @@
 import React, { Component } from 'react';
+import UserForm from './UserForm';
 
 export default class CVTheme extends Component {
+constructor(){
+    super();
+
+    this.SectionToFocus = React.createRef();
+
+}
+handleOnClick = (event) => {
+    //.current is verification that your element has rendered
+    if(this.SectionToFocus.current){
+        this.SectionToFocus.current.scrollIntoView({ 
+           behavior: "smooth", 
+           block: "nearest"
+        })
+    }
+}
+
+
+
+
     render() {
-        const {name,occupation,email,phone,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
+        const {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
         return (
+            <div>
+               {/*<UserForm handleOnClick={this.handleOnClick}/>*/}
+
             <div className="themeContainer">
-    <div className="cvWrapper">
+    <div className="cvWrapper"ref={this.SectionToFocus}>
 <div id="intro">
 <img src="https://images.unsplash.com/photo-1551523839-5dc0610b0c2c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"alt="girl"id="pic"></img>
 
@@ -17,7 +40,7 @@ export default class CVTheme extends Component {
 <div className="section One">
              <h3 className="sectionTitle">Address</h3>
           <div id="mail">{email}</div>
-          <div id="phone">{phone}</div>       
+          <div id="phone">{contactNo}</div>       
        <div id="location">{city}</div>
        </div>
 
@@ -46,7 +69,8 @@ export default class CVTheme extends Component {
 
 </div>
 </div>
-
+<button id="print">Print CV</button>
+</div>
         )
     }
 };
