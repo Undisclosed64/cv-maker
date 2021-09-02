@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import { AiOutlineMail,AiOutlinePhone } from "react-icons/ai";
+import {MdLocationOn } from "react-icons/md";
+import { FaUserGraduate,FaUniversity,FaCalendar } from "react-icons/fa";
+
+
 
 class CVTheme extends Component {
 
@@ -21,17 +26,17 @@ class CVTheme extends Component {
          <div id="contentWrapper">
 <div className="section One">
              <h3 className="sectionTitle">Address</h3>
-          <div id="mail">{email}</div>
-          <div id="phone">{contactNo}</div>       
-       <div id="location">{city}</div>
+          <div id="mail"><AiOutlineMail className="icon"/>{email}</div>
+          <div id="phone"><AiOutlinePhone className="icon"/>{contactNo}</div>       
+       <div id="location"><MdLocationOn className="icon"/>{city}</div>
        </div>
 
        <div className="section Two">
           <h3 className="sectionTitle">Education</h3>
-          <div id="course">{course}</div>
-          <div id="institute">{institution}</div>
-          <div id="clgLocation">{State}</div>
-          <div id="gradYear"><span>Graduation year --     </span>{graduationYear}</div>
+          <div id="course"><FaUserGraduate className="icons"/>{course}</div>
+          <div id="institute"><FaUniversity className="icons"/>{institution}</div>
+          <div id="clgLocation"><MdLocationOn className="icons"/>{State}</div>
+          <div id="gradYear"><span><FaCalendar className="icons"/>Graduation year --     </span>{graduationYear}</div>
 </div>
 
 <div className="section three">
