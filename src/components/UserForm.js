@@ -9,7 +9,7 @@ export class UserForm extends Component {
         step:1,
         name:'Sara David',
         occupation:'Web Developer',
-        email:'undisclosed674@gmail.com',
+        email:'saraa@gmail.com',
         contactNo:'+3987652103',
         city:'New York,US',
         course:'Bachelor in Humanities',
