@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
 import CVTheme from './CVTheme';
-import UserForm from './UserForm';
-
 class BasicInfo extends Component{
   continue = e => {
     e.preventDefault();

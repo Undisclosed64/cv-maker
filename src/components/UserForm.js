@@ -1,13 +1,9 @@
+
 import React, { Component } from 'react'
 import BasicInfo from './Basic Info';
 import Education from './Education';
 import WorkExp from './WorkExp';
 export class UserForm extends Component {
-    moveTOCV = (e) => {
-        e.preventDefault();
-       this.props.handleOnClick();
-   
-    }
     state = {
         step:1,
         name:'Sara David',
@@ -26,6 +22,9 @@ export class UserForm extends Component {
         EndDate:'01/05/2021',
 
 
+    }
+    moveTOCV = () => {
+       this.props.handleOnClick();
     }
 
     //proceed to next step

@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import UserForm from './UserForm';
 
-export default class CVTheme extends Component {
+
+class CVTheme extends Component {
 constructor(){
     super();
 
     this.SectionToFocus = React.createRef();
 
 }
-handleOnClick = (event) => {
+handleOnClick = () => {
+    alert('hi')
     //.current is verification that your element has rendered
     if(this.SectionToFocus.current){
         this.SectionToFocus.current.scrollIntoView({ 
@@ -17,16 +18,10 @@ handleOnClick = (event) => {
         })
     }
 }
-
-
-
-
     render() {
         const {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
         return (
             <div>
-               {/*<UserForm handleOnClick={this.handleOnClick}/>*/}
-
             <div className="themeContainer">
     <div className="cvWrapper"ref={this.SectionToFocus}>
 <div id="intro">
@@ -73,4 +68,9 @@ handleOnClick = (event) => {
 </div>
         )
     }
-};
+}
+export default CVTheme;
+
+
+
+
