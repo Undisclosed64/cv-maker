@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  /*font-family: "Roboto", sans-serif;*/
+  font-family: "Raleway", sans-serif;
+  padding-bottom: 4em;
+}
+header {
+  text-align: center;
+  background-color: #2a9d8f;
+  padding: 0.5em;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #f4f1de;
+}
+#brandName {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #f1faee;
+}
+.formContainer {
+  margin: 2em auto;
+  margin-top: 4em;
+  border-radius: 5px;
+  /*padding: 2em;*/
+  width: 80%;
+}
+.sectionName {
+  font-size: 1.5rem;
+  margin-left: 1em auto;
+  font-weight: 500;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input {
+  outline: 0;
+  padding: 12px;
+  width: 100%;
+  font-size: 16px;
+  font-family: Raleway;
+  border: 1px solid #dbb1b1;
+  margin: 0.8em auto;
+  background-color: #fff0f0;
+  border-radius: 0 0.2857rem 0.2857rem 0;
+}
+.first {
+  box-shadow: 2px 0 0 0 #d95c5c inset;
+}
+input:hover {
+  cursor: pointer;
+}
+::placeholder {
+  color: #d95c5c;
+}
+::-ms-input-placeholder {
+  color: #d95c5c;
+}
+.btns {
+  display: flex;
+  flex-direction: row;
+  margin-top: 1em;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.next,
+.prev {
+  padding: 10px;
+  width: 45%;
+  font-size: 16px;
+  border: none;
+  border-radius: 2px;
+}
+.prev {
+  background-color: #aaa;
+}
+.next {
+  background-color: #d95c5c;
+  color: #fff;
+}
+.btn {
+  float: right;
+  margin-top: 0.5em;
+}
+.themeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cvWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0.5em;
+  margin-top: 8em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+}
+#pic {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+#intro {
+  background-color: #d8e2dc;
+  font-size: 0.8rem;
+  width: 40%;
+  text-align: center;
+  margin-top: 0;
+  padding: 2em 1em 1em 1em;
+  padding-right: 0.1em;
+}
+#personName {
+  font-size: 1.4rem;
+  padding-bottom: 15px;
+}
+
+/*
+#mail,
+#phone,
+#location {
+}*/
+#contentWrapper {
+  font-family: "Roboto", sans-serif;
+  background-color: #f0efeb;
+  padding: 2em 1em 2em 0em;
+  padding-left: 1em;
+  width: 70%;
+}
+.sectionTitle {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #aaa;
+  text-transform: uppercase;
+  padding-bottom: 3px;
+}
+.section {
+  margin-bottom: 2.5em;
+  line-height: 25px;
+}
+#print {
+  background-color: #bccac9;
+  text-align: center;
+  width: 10em;
+  padding: 0.5em;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: block;
+}
+#view {
+  color: #2a9d8f;
+  display: flex;
+  justify-content: center;
+  margin-top: 10em;
+  font-weight: 600;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+@media only screen and (min-width: 464px) {
+  header {
+    padding: 1em;
+  }
+  #brandName {
+    margin-bottom: 0.5rem;
+  }
+  .formContainer {
+    max-width: 65%;
+  }
+  .cvWrapper {
+    width: 90%;
+    margin: 2em;
+  }
+  #intro {
+    font-size: 1rem;
+  }
+  #personName {
+    font-size: 1.3rem;
+  }
+  #contentWrapper {
+    padding-left: 2em;
+  }
+}
+@media only screen and (min-width: 751px) {
+  .formContainer {
+    max-width: 45%;
+  }
+  .cvWrapper {
+    width: 70%;
+    margin: 3em;
+  }
+}
