@@ -121,7 +121,6 @@ input:hover {
   text-align: center;
   margin-top: 0;
   padding: 2em 1em 1em 1em;
-  padding-right: 0.1em;
 }
 #personName {
   font-size: 1.4rem;
@@ -164,6 +163,15 @@ input:hover {
 }
 #skills {
   text-transform: uppercase;
+}
+.icon {
+  position: relative;
+  top: 0.2em;
+  right: 0.3em;
+}
+.icons {
+  position: relative;
+  right: 0.3em;
 }
 @media print {
   header,
