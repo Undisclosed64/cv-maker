@@ -25,7 +25,7 @@ header {
 }
 .formContainer {
   margin: 2em auto;
-  margin-top: 4em;
+  margin-top: 5em;
   border-radius: 5px;
   width: 80%;
 }
@@ -33,23 +33,35 @@ header {
   font-size: 1.5rem;
   margin-left: 1em auto;
   font-weight: 500;
+  margin-bottom: 1em;
+  color: #9f3a38;
 }
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-input {
+input,
+#imgfile {
   outline: 0;
   padding: 12px;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   font-family: Raleway;
   border: 1px solid #dbb1b1;
   margin: 0.5em auto;
   background-color: #fff0f0;
   border-radius: 0 0.2857rem 0.2857rem 0;
+  color: #9f3a38;
 }
+#imgfile {
+  font-weight: 400 !important;
+}
+label {
+  color: #9f3a38;
+  font-weight: 700;
+}
+
 .first {
   box-shadow: 2px 0 0 0 #d95c5c inset;
 }
@@ -60,12 +72,6 @@ input {
 input:hover {
   cursor: pointer;
 }
-::placeholder {
-  color: #d95c5c;
-}
-::-ms-input-placeholder {
-  color: #d95c5c;
-}
 .btns {
   display: flex;
   flex-direction: row;
@@ -73,7 +79,6 @@ input:hover {
   justify-content: space-between;
   flex-direction: row;
 }
-
 .next,
 .prev {
   padding: 10px;
@@ -103,9 +108,9 @@ input:hover {
   justify-content: center;
   width: 100%;
   margin: 0.5em;
-  margin-top: 8em;
   padding-right: 1em;
   margin-bottom: 1em;
+  margin-top: 3em;
 }
 #pic {
   border-radius: 50%;
@@ -133,6 +138,16 @@ input:hover {
   padding-left: 1em;
   width: 70%;
 }
+#personName,
+#occupation,
+#location,
+#course,
+#institute,
+#clgLocation,
+#role,
+#company {
+  text-transform: capitalize;
+}
 .sectionTitle {
   margin-bottom: 0.5em;
   border-bottom: 1px solid #aaa;
@@ -152,14 +167,25 @@ input:hover {
   margin: 0 auto;
   display: block;
 }
-#view {
+#viewBtn {
   color: #2a9d8f;
-  display: flex;
-  justify-content: center;
-  margin-top: 10em;
   font-weight: 600;
-  font-size: 1.3rem;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.5rem;
+  padding-top: 8em;
   cursor: pointer;
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  letter-spacing: 2px;
+}
+#backBtn {
+  margin: 1em 0 0 0.4em;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.6em;
+  color: rgb(48, 121, 113);
 }
 #skills {
   text-transform: uppercase;
@@ -173,9 +199,13 @@ input:hover {
   position: relative;
   right: 0.3em;
 }
+#imgFile {
+  display: none;
+}
 @media print {
   header,
   .formContainer,
+  #backBtn,
   #print {
     display: none;
   }
@@ -193,6 +223,7 @@ input:hover {
   .cvWrapper {
     width: 90%;
     margin: 2em;
+    margin-top: 2em;
   }
   #intro {
     font-size: 1rem;
