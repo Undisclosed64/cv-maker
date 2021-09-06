@@ -8,7 +8,7 @@ import { FaUserGraduate,FaUniversity,FaCalendar } from "react-icons/fa";
 class CVTheme extends Component {
 
     render() {
-        const {name,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
+        const {name,imgSrc,occupation,email,contactNo,city,course,institution,State,skills,graduationYear,job,company,StartDate,EndDate} = this.props;
 
         return (
             <div>
@@ -18,9 +18,9 @@ class CVTheme extends Component {
         
     <div id="intro">
 
-    <img src={this.props.imgSrc}alt=""id="pic"></img>
+    <img src={imgSrc}alt=""id="pic"></img>
           <h1 id="personName">{name}</h1>
-          <div>{occupation}</div>
+          <div id="occupation">{occupation}</div>
 
           </div>
          <div id="contentWrapper">

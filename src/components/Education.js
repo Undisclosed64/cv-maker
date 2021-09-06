@@ -18,24 +18,28 @@ class Education extends Component{
       <div className="formContainer">
         <div>
      <div className="sectionName">Education</div>
-      <form>
-      <input name="course"placeholder="Course"className="first"type="text"onChange={handleChange('course')}defaultValue={values.course}></input>
-
-      <input type="text"name='institution'placeholder="Institution"
+<form>
+<label>Degree
+      <input name="course"className="first"type="text"onChange={handleChange('course')}defaultValue={values.course}></input>
+      </label>
+      <label>Institution
+      <input type="text"name='institution'
    onChange={handleChange('institution')}defaultValue={values.institution}></input>
-
-  <input type="text"name='State'placeholder="State"onChange={handleChange('State')}defaultValue={values.State}></input>
-
-      <input name="skills"placeholder="Skills"onChange={handleChange('skills')}defaultValue={values.skills}></input>
-
-      <input name="graduationYear"placeholder="Graduation year"type="number"onChange={handleChange('graduationYear')}defaultValue={values.graduationYear}></input>
-
+</label>
+<label>State
+  <input type="text"name='State'onChange={handleChange('State')}defaultValue={values.State}></input>
+  </label>
+  <label>Skills
+      <input name="skills"onChange={handleChange('skills')}defaultValue={values.skills}></input>
+</label>
+<label>Graduation year
+      <input name="graduationYear"type="number"onChange={handleChange('graduationYear')}defaultValue={values.graduationYear}></input>
+</label>
       <div className="btns">
       <button className="prev"onClick={this.back}>Previous</button>
       <button className="next"onClick={this.continue}>Next</button>
       </div>
-      </form>
-  
+</form>
 </div>
 </div>
     )
