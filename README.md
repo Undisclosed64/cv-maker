@@ -18,7 +18,14 @@ FEATURES:
 4)It lets you choose a profile picture from your local machine.
 
 
+TECHNOLOGIES USED:
 
+REACT
 
+JSX
+
+CSS
+
+React-icons
 
 
