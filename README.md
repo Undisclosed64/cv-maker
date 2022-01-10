@@ -1,6 +1,6 @@
 # CV-MAKER
 
-<img style="margin: 30px" src="https://github.com/Undisclosed64/cv-maker/blob/main/cv-maker.png" alt="cv-maker" height="75" />  
+# <img style="margin: 30px" src="https://github.com/Undisclosed64/cv-maker/blob/main/cv-maker.png" alt="cv-maker"  />  
 
 
 https://cv-maker-app.netlify.app/
