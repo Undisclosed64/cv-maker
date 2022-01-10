@@ -1,8 +1,8 @@
 # CV-MAKER
 
-<img src="./cv-maker.png"alt="cv-maker-img">
+<img src="https://github.com/Undisclosed64/cv-maker/blob/main/cv-maker.png"alt="cv-maker-img">
 
-LIVE:
+
 
 https://cv-maker-app.netlify.app/
 
