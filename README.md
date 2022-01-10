@@ -9,10 +9,10 @@
 
 ## It's features
 
-### <li>It has a default CV for demo purpose.</li>
+#### <li>It has a default CV theme for demo purpose.</li>
 
-### <li> It uses a multi-step form to take user inputs and makes CV based on that. </li>
+#### <li> It uses a multi-step form to take user inputs and makes CV based on that. </li>
 
-### <li>It can print the CV to your local machine in a bunch of different formats,pdf is one such.</li>
+#### <li>It lets you upload profile picture from your local machine.</li>
 
-### <li>It lets you choose a profile picture from your local machine.</li>
+#### <li>It can print the CV to your local machine in a bunch of different formats,pdf is one such.</li>
