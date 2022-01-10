@@ -2,13 +2,10 @@
 
 # <img style="margin: 30px" src="https://github.com/Undisclosed64/cv-maker/blob/main/cv-maker.png" alt="cv-maker"  />  
 
-<a href="https://cv-maker-app.netlify.app/">View project live</a>
+## <a href="https://cv-maker-app.netlify.app/">View project live</a>
 
-
-DESCRIPTION:
-
-This is my first React JS project which is a CV-maker.
-
+## DESCRIPTION:
+#### This is a cv-maker project which takes user input and creates cv based on that.
 
 FEATURES:
 
