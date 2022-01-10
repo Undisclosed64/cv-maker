@@ -1,3 +1,7 @@
+# CV-MAKER
+
+<img src="./cv-maker.png"alt="cv-maker-img">
+
 LIVE:
 
 https://cv-maker-app.netlify.app/
