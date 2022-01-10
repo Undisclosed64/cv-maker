@@ -7,16 +7,12 @@
 ## DESCRIPTION:
 #### This is a cv-maker project which takes user input and creates cv based on that.
 
-FEATURES:
+## It's features
 
-1)It has a default CV for demo purpose.
+### <li>It has a default CV for demo purpose.</li>
 
-2)It uses a multi-step form to take user inputs and makes CV based on that.
+### <li> It uses a multi-step form to take user inputs and makes CV based on that. </li>
 
-3)It can print the CV to your local machine in a bunch of different formats,pdf is one such.
+### <li>It can print the CV to your local machine in a bunch of different formats,pdf is one such.</li>
 
-4)It lets you choose a profile picture from your local machine.
-
-
-
-
+### <li>It lets you choose a profile picture from your local machine.</li>
