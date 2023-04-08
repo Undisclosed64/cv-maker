@@ -1,27 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Lato", sans-serif;
   padding-bottom: 4em;
 }
 header {
-  text-align: center;
-  background-color: #2a9d8f;
-  padding: 0.5em;
-  font-weight: 400;
-  font-size: 1.1rem;
-  color: #f4f1de;
+  background: #f3f6f9;
+  color: #8330e6;
 }
 #brandName {
-  font-size: 1.6rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-  color: #f1faee;
 }
 .formContainer {
   margin: 2em auto;
@@ -88,7 +86,8 @@ input:hover {
   border-radius: 2px;
 }
 .prev {
-  background-color: #c2c5aa;
+  background-color: #7c7c7c;
+  color: white;
 }
 .next {
   background-color: #d95c5c;
@@ -98,7 +97,8 @@ input:hover {
   float: right;
   margin-top: 0.5em;
 }
-.themeContainer {
+
+/* .themeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -111,7 +111,7 @@ input:hover {
   padding-right: 1em;
   margin-bottom: 1em;
   margin-top: 3em;
-}
+} */
 #pic {
   border-radius: 50%;
   width: 100px;
@@ -132,7 +132,6 @@ input:hover {
   padding-bottom: 15px;
 }
 #contentWrapper {
-  font-family: "Roboto", sans-serif;
   background-color: #f0efeb;
   padding: 2em 1em 2em 0em;
   padding-left: 1em;
@@ -159,33 +158,25 @@ input:hover {
   line-height: 25px;
 }
 #print {
-  background-color: #bccac9;
-  text-align: center;
-  width: 10em;
-  padding: 0.5em;
-  border: 1px solid black;
-  margin: 0 auto;
-  display: block;
 }
 #viewBtn {
-  color: #2a9d8f;
-  font-weight: 600;
+  color: #8330e6;
+  font-weight: 700;
   margin: 0 auto;
   display: block;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-top: 8em;
   cursor: pointer;
   border: none;
   background-color: transparent;
   text-decoration: underline;
-  letter-spacing: 2px;
 }
 #backBtn {
   margin: 1em 0 0 0.4em;
   cursor: pointer;
   display: inline-block;
   font-size: 1.6em;
-  color: rgb(48, 121, 113);
+  color: #8330e6;
 }
 #skills {
   text-transform: uppercase;
@@ -220,11 +211,11 @@ input:hover {
   .formContainer {
     max-width: 65%;
   }
-  .cvWrapper {
+  /* .cvWrapper {
     width: 90%;
     margin: 2em;
     margin-top: 2em;
-  }
+  } */
   #intro {
     font-size: 1rem;
   }
@@ -238,9 +229,5 @@ input:hover {
 @media only screen and (min-width: 751px) {
   .formContainer {
     max-width: 45%;
-  }
-  .cvWrapper {
-    width: 70%;
-    margin: 3em;
   }
 }
