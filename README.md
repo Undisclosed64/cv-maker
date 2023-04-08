@@ -1,6 +1,5 @@
 # CV-MAKER
 
-# <img style="margin: 30px" src="https://github.com/Undisclosed64/cv-maker/blob/main/cv-maker.png" alt="cv-maker"  />  
 
 ## <a href="https://cv-maker-app.netlify.app/">View project live</a>
 
